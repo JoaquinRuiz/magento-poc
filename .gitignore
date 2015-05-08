@@ -1,0 +1,33 @@
+/app/etc/local.xml
+/app/etc/local.xml.phpunit
+
+/media/*
+/var/*
+/downloader/pearlib/cache/*
+/downloader/pearlib/download/*
+/downloader/*.cfg
+/downloader/.cache
+/app/etc/use_cache.ser
+/errors/local.xml
+/includes/*
+.htaccess
+
+# Ignore PHPStorm
+/.idea/
+/.phpstorm.meta.php
+
+# Ignore SublimeText
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Modman
+/.modman/
+
+# Ignore code coverage reports
+/build/
+
+# Ignore build cache
+cache.properties
+
+# Misc files
+.DS_Store
