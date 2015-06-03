@@ -1,0 +1,16 @@
+<div id="header">
+    <div id="logo">
+        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+            <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+        </a>
+    </div>
+    <div id="hud">
+        <h3>Welcome</h3>
+        <?php echo $this->getChildHtml('topLinks') ?>
+    </div>
+</div>
+
+<div id="utilities">
+    <?php echo $this->getChildHtml('breadcrumbs') ?>
+    <?php echo $this->getChildHtml('topSearch') ?>
+</div>
