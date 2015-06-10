@@ -1,0 +1,7 @@
+<layout>
+    <default>
+        <reference name="content">
+            <block type="demo/configurable" name="demo" template="jokiruiz/configurable.phtml" />
+        </reference>
+    </default>
+</layout>

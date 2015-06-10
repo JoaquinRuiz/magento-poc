@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <frontend>
+        <routers>
+            <jokiruiz_controllers>
+                <use>standard</use>
+                <args>
+                    <module>JokiRuiz_Controller</module>
+                    <frontName>controller</frontName>
+                </args>
+            </jokiruiz_controllers>
+
+            <catalog>
+                <args>
+                    <modules>
+                        <demo before="Mage_Catalog">JokiRuiz_Controller</demo>
+                    </modules>
+                </args>
+            </catalog>
+        </routers>
+    </frontend>
+</config>

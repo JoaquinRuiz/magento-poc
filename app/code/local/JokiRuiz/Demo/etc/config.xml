@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+
+<config>
+    <frontend>
+        <routers>
+            <jokiruiz_demo_page>
+                <use>standard</use>
+                <args>
+                    <module>JokiRuiz_Demo</module>
+                    <frontName>demo</frontName>
+                </args>
+            </jokiruiz_demo_page>
+        </routers>
+
+        <layout>
+            <updates>
+                <demo>
+                    <file>jokiruiz.xml</file>
+                </demo>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <models>
+            <demo>
+                <class>JokiRuiz_Demo_Model</class>
+            </demo>
+        </models>
+
+        <blocks>
+            <demo>
+                <class>JokiRuiz_Demo_Block</class>
+            </demo>
+        </blocks>
+
+        <helpers>
+            <demo>
+                <class>JokiRuiz_Demo_Helper</class>
+            </demo>
+        </helpers>
+
+        <events>
+            <customer_login>
+                <observers>
+                    <demo>
+                        <type>model</type>
+                        <class>demo/observer</class>
+                        <method>logCustomer</method>
+                    </demo>
+                </observers>
+            </customer_login>
+        </events>
+    </global>
+
+</config>

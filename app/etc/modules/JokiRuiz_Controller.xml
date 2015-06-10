@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <JokiRuiz_Controller>
+            <active>true</active>
+            <codePool>local</codePool>
+        </JokiRuiz_Controller>
+    </modules>
+</config>
