@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <JokiRuiz_Reviews>
+            <version>0.0.1</version>
+        </JokiRuiz_Reviews>
+    </modules>
+    <global>
+        <models>
+            <jokiruiz_reviews>
+                <class>JokiRuiz_Reviews_Model</class>
+                <resourceModel>jokiruiz_reviews_mysql4</resourceModel>
+            </jokiruiz_reviews>
+            <jokiruiz_reviews_mysql4>
+                <class>JokiRuiz_Reviews_Model_Mysql4</class>
+                <entities>
+                    <review>
+                        <table>jokiruiz_reviews</table>
+                    </review>
+                </entities>
+            </jokiruiz_reviews_mysql4>
+        </models>
+
+        <blocks>
+            <jokiruiz_reviews>
+                <class>JokiRuiz_Reviews_Block</class>
+            </jokiruiz_reviews>
+        </blocks>
+
+        <helpers>
+            <jokiruiz_reviews>
+                <class>JokiRuiz_Reviews_Helper</class>
+            </jokiruiz_reviews>
+        </helpers>
+
+    </global>
+
+    <resources>
+        <jokiruiz_reviews_setup>
+            <setup>
+                <module>JokiRuiz_Reviews</module>
+            </setup>
+            <connection>
+                <use>core_setup</use>
+            </connection>
+        </jokiruiz_reviews_setup>
+        <jokiruiz_reviews_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </jokiruiz_reviews_write>
+        <jokiruiz_reviews_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </jokiruiz_reviews_read>
+    </resources>
+
+    <frontend>
+        <routers>
+            <orderreview>
+                <use>standard</use>
+                <args>
+                    <module>JokiRuiz_Reviews</module>
+                    <frontName>order-review</frontName>
+                </args>
+            </orderreview>
+        </routers>
+        <layout>
+            <updates>
+                <assign>
+                    <file>jokiruiz/reviews.xml</file>
+                </assign>
+            </updates>
+        </layout>
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <JokiRuiz_Reviews before="Mage_Adminhtml">JokiRuiz_Reviews_Adminhtml</JokiRuiz_Reviews>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+</config>

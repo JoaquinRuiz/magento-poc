@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <JokiRuiz_Stockists>
+            <version>0.0.1</version>
+        </JokiRuiz_Stockists>
+    </modules>
+    <global>
+        <models>
+            <jokiruiz_stockists_model>
+                <class>JokiRuiz_Stockists_Model</class>
+                <resourceModel>jokiruiz_stockists_model_resource</resourceModel>
+            </jokiruiz_stockists_model>
+            <jokiruiz_stockists_model_resource>
+                <class>JokiRuiz_Stockists_Model_Resource</class>
+                <entities>
+                    <stockist>
+                        <table>jokiruiz_stockists</table>
+                    </stockist>
+                </entities>
+            </jokiruiz_stockists_model_resource>
+        </models>
+        <blocks>
+            <jokiruiz_stockists>
+                <class>JokiRuiz_Stockists_Block</class>
+            </jokiruiz_stockists>
+        </blocks>
+        <helpers>
+            <jokiruiz_stockists>
+                <class>JokiRuiz_Stockists_Helper</class>
+            </jokiruiz_stockists>
+        </helpers>
+    </global>
+
+    <frontend>
+        <routers>
+            <stockists>
+                <use>standard</use>
+                <args>
+                    <module>JokiRuiz_Stockists</module>
+                    <frontName>stockists</frontName>
+                </args>
+            </stockists>
+        </routers>
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <JokiRuiz_Stockists before="Mage_Adminhtml">JokiRuiz_Stockists_Adminhtml</JokiRuiz_Stockists>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

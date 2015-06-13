@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <config>
+                            <children>
+                                <stockists translate="title" module="jokiruiz_stockists">
+                                    <title>Stockists</title>
+                                </stockists>
+                            </children>
+                        </config>
+                    </system>
+                    <stockists translate="title" module="jokiruiz_stockists">
+                        <title>Stockists</title>
+                    </stockists>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <stockists translate="title" module="jokiruiz_stockists">
+            <title>Stockists</title>
+            <sort_order>120</sort_order>
+            <depends>
+                <module>JokiRuiz_Stockists</module>
+            </depends>
+            <action>adminhtml/stockists</action>
+        </stockists>
+    </menu>
+</config>
