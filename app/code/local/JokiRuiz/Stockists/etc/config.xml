@@ -7,30 +7,54 @@
     </modules>
     <global>
         <models>
-            <jokiruiz_stockists_model>
+            <jokiruiz_stockists>
                 <class>JokiRuiz_Stockists_Model</class>
-                <resourceModel>jokiruiz_stockists_model_resource</resourceModel>
-            </jokiruiz_stockists_model>
-            <jokiruiz_stockists_model_resource>
-                <class>JokiRuiz_Stockists_Model_Resource</class>
+                <resourceModel>jokiruiz_stockists_mysql4</resourceModel>
+            </jokiruiz_stockists>
+
+            <jokiruiz_stockists_mysql4>
+                <class>JokiRuiz_Stockists_Model_Mysql4</class>
                 <entities>
-                    <stockist>
+                    <stockists>
                         <table>jokiruiz_stockists</table>
-                    </stockist>
+                    </stockists>
                 </entities>
-            </jokiruiz_stockists_model_resource>
+            </jokiruiz_stockists_mysql4>
         </models>
+
         <blocks>
             <jokiruiz_stockists>
                 <class>JokiRuiz_Stockists_Block</class>
             </jokiruiz_stockists>
         </blocks>
+
         <helpers>
             <jokiruiz_stockists>
                 <class>JokiRuiz_Stockists_Helper</class>
             </jokiruiz_stockists>
         </helpers>
     </global>
+
+    <resources>
+        <jokiruiz_stockists_setup>
+            <setup>
+                <module>JokiRuiz_Stockists</module>
+            </setup>
+            <connection>
+                <use>core_setup</use>
+            </connection>
+        </jokiruiz_stockists_setup>
+        <jokiruiz_stockists_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </jokiruiz_stockists_write>
+        <jokiruiz_stockists_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </jokiruiz_stockists_read>
+    </resources>
 
     <frontend>
         <routers>
@@ -44,6 +68,16 @@
         </routers>
     </frontend>
 
+    <adminhtml>
+        <layout>
+            <updates>
+                <assign>
+                    <file>jokiruiz/stockistadmin.xml</file>
+                </assign>
+            </updates>
+        </layout>
+    </adminhtml>
+
     <admin>
         <routers>
             <adminhtml>
@@ -54,5 +88,6 @@
                 </args>
             </adminhtml>
         </routers>
+
     </admin>
 </config>

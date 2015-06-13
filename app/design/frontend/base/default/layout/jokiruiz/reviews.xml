@@ -3,7 +3,7 @@
 
     <orderreview_index_index>
         <reference name="content">
-            <block type="core/template" name="order_review_form" template="jokiruiz/reviews/form.phtml" />
+            <block type="jokiruiz_stockists/adminhtml_stockists_index" name="order_review_form" template="jokiruiz/reviews/form.phtml" />
         </reference>
     </orderreview_index_index>
 </layout>

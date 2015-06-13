@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_stockists_index>
+        <reference name="left">
+            <block type="core/template" name='stockists_index_map' template="jokiruiz/stockistadmin/map.phtml">
+            </block>
+        </reference>
+    </adminhtml_stockists_index>
+</layout>

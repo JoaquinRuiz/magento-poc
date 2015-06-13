@@ -4,6 +4,8 @@ class JokiRuiz_Stockists_IndexController extends Mage_Core_Controller_Front_Acti
 {
     public function indexAction()
     {
+
+
         echo "list stockistss";
     }
 }
