@@ -24,7 +24,8 @@ class JokiRuiz_Stockists_Adminhtml_StockistsController extends Mage_Adminhtml_Co
 
         $this->getLayout()
             ->getBlock('stockists_index_map')
-            ->setData('title','Stockists map');
+            ->setData('title','Stockists map')
+            ->setData('stockists', Mage::getModel('jokiruiz_stockists/stockists')->getCollection());
 
         $this->_addContent(
             $this->getLayout()->createBlock('jokiruiz_stockists/adminhtml_stockists')
@@ -86,6 +87,18 @@ class JokiRuiz_Stockists_Adminhtml_StockistsController extends Mage_Adminhtml_Co
     {
         if ($postData = $this->getRequest()->getPost()) {
             $model = Mage::getModel('jokiruiz_stockists/stockists');
+
+            // calculate lat, lng
+            $url = 'https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBRPpM9StEqCizqhxYVz63ZFQMdKMr4lxM&address='.
+                urlencode($postData['address']).','.urlencode($postData['city']).','.urlencode($postData['country']).
+                '&sensor=false‌​';
+            $data = @file_get_contents($url);
+            $result = json_decode($data);
+            $lat = $result->results[0]->geometry->location->lat;
+            $lng = $result->results[0]->geometry->location->lng;
+
+            $postData['latitude']=$lat;
+            $postData['longitude']=$lng;
             $model->setData($postData);
 
             try {
