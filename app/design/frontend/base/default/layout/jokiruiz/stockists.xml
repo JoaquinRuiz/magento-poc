@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <stockists_index_index>
+        <reference name="content">
+            <block type="core/template" name="jokiruiz_stockists"
+                   template="jokiruiz/stockists/stockists.phtml" />
+        </reference>
+    </stockists_index_index>
+</layout>

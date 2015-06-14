@@ -66,6 +66,13 @@
                 </args>
             </stockists>
         </routers>
+        <layout>
+            <updates>
+                <assign>
+                    <file>jokiruiz/stockists.xml</file>
+                </assign>
+            </updates>
+        </layout>
     </frontend>
 
     <adminhtml>
